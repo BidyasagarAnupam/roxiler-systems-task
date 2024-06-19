@@ -22,7 +22,7 @@ database.connect();
 app.use(express.json());
 app.use(
     cors({
-        origin:"http://localhost:3000",
+        origin:"https://roxiler-systems-task.vercel.app",
         credentials: true,
     })
 )
