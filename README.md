@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+## Table of Contents
+1. [Project's Title](#transaction-dashboard)
+2. [Project Description](#project-description)
+3. [How to Install and Run the Project](#how-to-install-and-run-the-project)
+4. [How to Use the Project](#how-to-use-the-project)
+5. [Credits](#credits)
+6. [References](#references)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Transaction Dashboard
 
-## Available Scripts
+This project is a comprehensive transaction management system designed to help users track and analyze their sales data efficiently. It provides detailed statistics, a searchable transaction table, and interactive charts for better insights.
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+The Transaction Dashboard is built to offer users a seamless experience in managing and analyzing transaction data. It includes features such as searching transactions, viewing monthly statistics, and visualizing price ranges through charts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Key features include:
+- **Transaction Management**: View and search transactions with pagination.
+- **Statistics**: Detailed monthly statistics for sales, sold items, and unsold items.
+- **Visualization**: Interactive bar charts to visualize price ranges and transaction distributions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Technologies used:
+- **Frontend**: React, Tailwind CSS, ApexCharts
+- **Backend**: Node.js, Express, MongoDB
+- **UI Components**: NextUI
 
-### `npm test`
+Challenges faced:
+- Implementing efficient search and pagination.
+- Creating responsive and interactive charts.
+- Ensuring smooth integration between frontend and backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Future improvements:
+- Adding user authentication.
+- Enhancing the filtering options.
+- Implementing real-time data updates.
 
-### `npm run build`
+## How to Install and Run the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js
+- MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation Steps
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/transaction-dashboard.git
+    cd transaction-dashboard
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install the dependencies in both root and backend directories:
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+3. Set up the environment variables. Create a `.env` file in the root directory and in backend file and add the following:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    In root directory `.env`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```plaintext
+    REACT_APP_BASE_URL = http://localhost:4000/api/v1
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    In backend directory `.env`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```plaintext
+    MONGODB_URL=your_mongodb_connection_string
+    PORT=4000
+    ```
 
-## Learn More
+4. 1st hit the `api` (given below) from Postman with `post` method to initialize the DB
+    ```bash
+    http://localhost:4000/api/v1/db/intializeDB
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Start the backend server:
+    ```bash
+    npm run dev
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. Start the frontend development server:
+    ```bash
+    npm start
+    ```
+6. Start the backend server and frontend development server concurrently:
 
-### Code Splitting
+    ```bash
+    npm run dev
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How to Use the Project
 
-### Making a Progressive Web App
+1. **Search Transactions**: Type keywords in the search bar and press Enter to filter transactions based on the search term.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Select Month**: Use the dropdown menu to select a month and view statistics and transactions for that period.
 
-### Advanced Configuration
+3. **View Statistics**: Scroll down to view detailed statistics for the selected month.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. **Visualize Data**: Check out the interactive bar charts for a visual representation of the price ranges and transaction data.
 
-### Deployment
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Developer
+- **Bidyasagar** - [GitHub](https://github.com/BidyasagarAnupam)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### References
+- [NextUI Documentation](https://nextui.org/docs/guide/getting-started)
+- [ApexCharts Documentation](https://apexcharts.com/docs/react-charts/)
