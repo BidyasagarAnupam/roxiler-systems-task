@@ -54,7 +54,7 @@ const TransactionComponent = ({
                 {
                     (
                         transactionData.length === 0 ? (
-                            <TableBody emptyContent={"No data found"}>{[]}</TableBody>
+                            <TableBody emptyContent={`${loading ? "Loading..." : "No data found"}`}>{[]}</TableBody>
                         ) : (
                             <TableBody items={transactionData}>
                                 {
